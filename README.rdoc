@@ -1,28 +1,17 @@
-== README
+== iTxt BulkSMS API
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+A simple application to consume the iTxt BulkSMS API. You can check out iTxt BulkSMS [here](http://www.itxt.ikernelnetworks.com)
 
-Things you may want to cover:
+= Tools used
 
-* Ruby version
+* RestClient
 
-* System dependencies
+* Ruby
 
-* Configuration
+* RailsLogger
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
+* HTTP
 
 * ...
 
-
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+Check out our [company](http://www.ikernelnetworks.com)
