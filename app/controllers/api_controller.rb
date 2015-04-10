@@ -3,16 +3,19 @@ class ApiController < ApplicationController
 	require "json"
 
 
-	def self.send_itxt_request(senderid, contact, message)
+	def self.send_itxt_request(senderid, contact, message, schedule_time, schedule_date)
 
 		base_url 	  = "http://itxt.ikernelnetworks.com/api/v1/sendsms?"
 		key		 	  = "6A43KdICrEyObnjeJYMVvi2ZqgG0PDkc"
 		senderid 	  = senderid
 		contact  	  = contact
 		message  	  = message    #"Sending SMS Via iTxt API with ruby on rails"
-		schedule_date = "now" 
-		#schedule_time = ""
+		schedule_date = schedule_date 
+		schedule_time = schedule_time
 
+		# condition should come here
+		# if schedule_time is specified then
+		# 
 		signed_url = URI.encode(
 					 base_url							+
 					 "key=#{key}"						+
@@ -35,6 +38,13 @@ class ApiController < ApplicationController
 	end
 
 	
+
+	# use this method for a scheduled message
+	# method called if schedule_time is specified
+	def self.schedule_message
+		
+	end
+
 	# Convert iTxt BULK SMS response code to meaningful message
 	# for customer
 	def self.get_status_message(status)
